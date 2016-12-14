@@ -4,6 +4,7 @@
 // Code for: https://youtu.be/AaGK-fj-BAM
 
 var s;
+var b;
 var scl = 20;
 var cols = floor(width/scl);
 var rows = floor(height/scl);
@@ -12,9 +13,10 @@ var food;
 
 function setup() {
   createCanvas(600, 600);
-  s = new Snake();
   cols = floor(width/scl);
   rows = floor(height/scl);
+  s = new Snake();
+  b = new Bot(cols, rows);
   frameRate(10);
   pickLocation();
 
