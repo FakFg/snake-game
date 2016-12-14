@@ -10,7 +10,6 @@ function Snake() {
   this.ydestiny = 0;
   this.xspeed = 0;
   this.yspeed = 0;
-  this.first = true;
   this.total = 0;
   this.tail = [];
   
@@ -25,7 +24,6 @@ function Snake() {
       } else if (this.ydestiny > this.y) {
         this.dir(0, 1);
       } else {
-        this.first = false;
         this.dir(0, 0);
       }
       var d = dist(this.x, this.y, pos.x, pos.y);
@@ -65,7 +63,6 @@ function Snake() {
         this.y = height/2;
         this.xdestiny = 0;
         this.ydestiny = 0;
-        this.first = true;
         this.dir(0, 0);
         this.total = 0;
         this.tail = [];
