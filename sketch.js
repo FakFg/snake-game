@@ -14,8 +14,7 @@ function setup() {
   createCanvas(600, 600);
   cols = floor(width/scl);
   rows = floor(height/scl);
-  s = new Snake(width/2, height/2);
-  s.setup(0, 0);
+  s = new Snake();
   frameRate(10);
   pickLocation();
 
