@@ -3,20 +3,15 @@
 // http://patreon.com/codingrainbow
 // Code for: https://youtu.be/AaGK-fj-BAM
 
-function Snake(x, y) {
-  this.x = x;
-  this.y = y;
-  this.xdestiny;
-  this.ydestiny;
+function Snake() {
+  this.x = width/2;
+  this.y = height/2;
+  this.xdestiny = 0;
+  this.ydestiny = 0;
   this.xspeed = 0;
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
-  
-  this.setup = function(x, y) {
-    this.xdestiny = x;
-    this.ydestiny = y;
-  }
   
   this.goto = function() {
     if (this.xdestiny < this.x) {
