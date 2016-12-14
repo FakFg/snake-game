@@ -14,11 +14,6 @@ function Snake() {
   function Snake(x, y) {
     this.x = x;
     this.y = y;
-    while (this.x > 0) {
-      this.show();
-      this.dir(-1, 0);
-    }
-    this.dir(0, 0);
   }
 
   this.eat = function(pos) {
