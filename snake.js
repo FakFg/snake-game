@@ -64,8 +64,6 @@ function Snake(x, y) {
   }
 
   this.show = function() {
-    console.log(this.x);
-    console.log(this.y);
     fill(255);
     for (var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
