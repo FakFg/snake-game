@@ -12,7 +12,11 @@ function Snake(x, y) {
   this.tail = [];
   
   this.setup = function() {
-    this.dir(-1, 0);
+    while (this.x > 0) {
+      this.show();
+      this.dir(-1, 0);
+    }
+    this.dir(0, 1);
   }
 
   this.eat = function(pos) {
