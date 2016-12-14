@@ -4,16 +4,16 @@
 // Code for: https://youtu.be/AaGK-fj-BAM
 
 function Snake() {
-  this.x = width/2;
-  this.y = height/2;
+  this.x;
+  this.y;
   this.xspeed = 0;
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
   
-  function Snake() {
-    this.x = 0;
-    this.y = 0;
+  function Snake(x, y) {
+    this.x = x;
+    this.y = y;
     while (this.x > 0) {
       this.dir(-1, 0);
     }
