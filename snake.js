@@ -3,18 +3,13 @@
 // http://patreon.com/codingrainbow
 // Code for: https://youtu.be/AaGK-fj-BAM
 
-function Snake() {
+function Snake(x, y) {
   this.x;
   this.y;
   this.xspeed = 0;
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
-  
-  function Snake(x, y) {
-    this.x = x;
-    this.y = y;
-  }
 
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
