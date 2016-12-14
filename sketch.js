@@ -6,8 +6,8 @@
 var s;
 var b;
 var scl = 20;
-var cols = floor(width/scl);
-var rows = floor(height/scl);
+var cols = 0;
+var rows = 0;
 
 var food;
 
