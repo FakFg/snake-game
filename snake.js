@@ -15,6 +15,7 @@ function Snake() {
   this.tail = [];
   
   this.goto = function() {
+      console.log(this.y);
       var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
         if (this.first) {
