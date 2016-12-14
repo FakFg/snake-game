@@ -13,6 +13,8 @@ var food;
 function setup() {
   createCanvas(600, 600);
   s = new Snake();
+  cols = floor(width/scl);
+  rows = floor(height/scl);
   frameRate(10);
   pickLocation();
 
