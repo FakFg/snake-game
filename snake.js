@@ -10,16 +10,24 @@ function Snake() {
   this.ydestiny = 0;
   this.xspeed = 0;
   this.yspeed = 0;
+  this.first = true;
   this.total = 0;
   this.tail = [];
   
   this.goto = function() {
-    if (this.xdestiny < this.x) {
-      this.dir(-1, 0);
-    } else if (this.ydestiny < this.y) {
-      this.dir(0, -1);
+    if (this.first) {
+      if (this.xdestiny < this.x) {
+        this.dir(-1, 0);
+      } else if (this.ydestiny < this.y) {
+        this.dir(0, -1);
+      } else {
+        this.dir(0, 0);
+        this.first = false;
+      }
     } else {
-      this.dir(0, 0);
+      if ((this.y % 2) = 1) {
+        this.dir(1, 0);
+      }
     }
   }
 
