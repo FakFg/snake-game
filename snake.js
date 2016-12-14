@@ -17,22 +17,25 @@ function Snake() {
   this.goto = function() {
       var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
-      }
-    if (this.first) {
-      if (this.xdestiny < this.x) {
-        this.dir(-1, 0);
-      } else if (this.ydestiny < this.y) {
-        this.dir(0, -1);
-      } else {
-        this.dir(0, 0);
-        this.first = false;
-      }
-    } else {
-        if ((this.y % 2) == 0) {
-          this.ydestiny = 30;
-          this.dir(1, 0);
+        if (this.first) {
+          if (this.xdestiny < this.x) {
+            this.dir(-1, 0);
+          } else if (this.ydestiny < this.y) {
+            this.dir(0, -1);
+          } else {
+            this.dir(0, 0);
+            this.first = false;
+          }
+        } else {
+            if (this.y == 30) {
+              this.xdestiny = this.x + 1;
+              this.dir(0, 1);
+            } else if ((this.y % 2) == 0) {
+              this.ydestiny = 30;
+              this.dir(1, 0);
+            }
         }
-    }
+      }
   }
 
   this.eat = function(pos) {
