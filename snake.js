@@ -54,6 +54,9 @@ function Snake() {
         console.log('starting over');
         this.x = width/2;
         this.y = height/2;
+        this.xdestiny = 0;
+        this.ydestiny = 0;
+        this.first = true;
         this.dir(0, 0);
         this.total = 0;
         this.tail = [];
