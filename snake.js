@@ -21,6 +21,8 @@ function Snake(x, y) {
   this.goto = function() {
     if (this.xdestiny < this.x) {
       this.dir(-1, 0);
+    } else if (this.ydestiny < this.y) {
+      this.dir(0, -1);
     } else {
       this.dir(0, 0);
     }
