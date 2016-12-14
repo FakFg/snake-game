@@ -15,6 +15,7 @@ function setup() {
   cols = floor(width/scl);
   rows = floor(height/scl);
   s = new Snake(width/2, height/2);
+  s.setup();
   frameRate(10);
   pickLocation();
 
