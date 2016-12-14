@@ -27,6 +27,7 @@ function Snake() {
     } else {
       if ((this.y % 2) == 0) {
         this.ydestiny = 30;
+        this.dir(1, 0);
       }
     }
   }
