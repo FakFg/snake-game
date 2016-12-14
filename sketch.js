@@ -4,7 +4,6 @@
 // Code for: https://youtu.be/AaGK-fj-BAM
 
 var s;
-var b;
 var scl = 20;
 var cols = 0;
 var rows = 0;
@@ -16,7 +15,6 @@ function setup() {
   cols = floor(width/scl);
   rows = floor(height/scl);
   s = new Snake();
-  b = new Bot(cols, rows, s);
   frameRate(10);
   pickLocation();
 
