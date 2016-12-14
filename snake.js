@@ -26,7 +26,7 @@ function Snake() {
       }
     } else {
       console.log(this.y);
-      if ((this.y % 2) == 1) {
+      if ((this.y % 2) == 0) {
         this.dir(1, 0);
       }
     }
