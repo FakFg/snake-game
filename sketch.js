@@ -5,6 +5,8 @@
 
 var s;
 var scl = 20;
+var cols = floor(width/scl);
+var rows = floor(height/scl);
 
 var food;
 
@@ -17,8 +19,6 @@ function setup() {
 }
 
 function pickLocation() {
-  var cols = floor(width/scl);
-  var rows = floor(height/scl);
   food = createVector(floor(random(cols)), floor(random(rows)));
   food.mult(scl);
 }
