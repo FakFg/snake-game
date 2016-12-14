@@ -11,7 +11,7 @@ function Snake(x, y) {
   this.total = 0;
   this.tail = [];
   
-  function setup() {
+  this.setup = function() {
     this.dir(-1, 0);
   }
 
