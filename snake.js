@@ -14,7 +14,8 @@ function Snake(x, y) {
   this.tail = [];
   
   this.setup = function(x, y) {
-    console.log(this.x, this.y);
+    console.log(this.x);
+    console.log(this.y);
     this.xdestiny = x;
     this.ydestiny = y;
   }
