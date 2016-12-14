@@ -17,6 +17,7 @@ function Snake() {
     while (this.x > 0) {
       this.dir(-1, 0);
     }
+    this.dir(0, 0);
   }
 
   this.eat = function(pos) {
