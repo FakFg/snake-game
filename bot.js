@@ -1,0 +1,4 @@
+function Bot() {
+  function setup() {
+  }
+}
