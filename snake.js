@@ -10,6 +10,12 @@ function Snake() {
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
+  
+  function Snake() {
+    while (this.x > 0) {
+      this.dir(-1, 0);
+    }
+  }
 
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
