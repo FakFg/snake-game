@@ -6,13 +6,16 @@
 function Snake(x, y) {
   this.x = x;
   this.y = y;
+  this.xdestiny;
+  this.ydestiny;
   this.xspeed = 0;
   this.yspeed = 0;
   this.total = 0;
   this.tail = [];
   
-  this.setup = function() {
-    this.dir(0, 1);
+  this.setup = function(x, y) {
+    this.xdestiny = x;
+    this.ydestiny = y;
   }
 
   this.eat = function(pos) {
