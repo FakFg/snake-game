@@ -4,8 +4,8 @@
 // Code for: https://youtu.be/AaGK-fj-BAM
 
 function Snake(x, y) {
-  this.x;
-  this.y;
+  this.x = x;
+  this.y = y;
   this.xspeed = 0;
   this.yspeed = 0;
   this.total = 0;
