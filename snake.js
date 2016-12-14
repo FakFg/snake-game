@@ -12,6 +12,8 @@ function Snake() {
   this.tail = [];
   
   function Snake() {
+    this.x = 0;
+    this.y = 0;
     while (this.x > 0) {
       this.dir(-1, 0);
     }
