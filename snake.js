@@ -26,7 +26,7 @@ function Snake() {
       } else {
         this.dir(0, 0);
       }
-      var d = dist(this.x, this.y, pos.x, pos.y);
+      var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
         if (this.x == 580) {
           this.ydestiny = this.y + 1;
