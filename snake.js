@@ -16,23 +16,27 @@ function Snake() {
   
   this.goto = function() {
       console.log(this.x);
-      if (this.first) {
-        if (this.xdestiny < this.x) {
-          this.dir(-1, 0);
-        } else if (this.ydestiny < this.y) {
-          this.dir(0, -1);
-        } else {
-          this.dir(0, 0);
-          this.first = false;
-        }
+      if (this.xdestiny < this.x) {
+        this.dir(-1, 0);
+      } else if (this.xdestiny > this.x) {
+        this.dir(1, 0);
+      } else if (this.ydestiny < this.y) {
+        this.dir(0, -1);
+      } else if (this.ydestiny > this.y) {
+        this.dir(0, 1);
       } else {
-          if (this.x == 580) {
-            this.ydestiny = this.y + 1;
-            this.dir(0, 1);
-          } else if ((this.y % 2) == 0) {
-            this.xdestiny = 580;
-            this.dir(1, 0);
-          }
+        this.first = false;
+        this.dir(0, 0);
+      }
+      var d = dist(this.x, this.y, pos.x, pos.y);
+      if (d < 1) {
+        if (this.x == 580) {
+          this.ydestiny = this.y + 1;
+          this.dir(0, 1);
+        } else if ((this.y % 2) == 0) {
+          this.xdestiny = 580;
+          this.dir(1, 0);
+        }
       }
   }
 
