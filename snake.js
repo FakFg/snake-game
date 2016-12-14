@@ -17,6 +17,14 @@ function Snake(x, y) {
     this.xdestiny = x;
     this.ydestiny = y;
   }
+  
+  this.goto = function() {
+    if (this.xdestiny < this.x) {
+      this.dir(-1, 0);
+    } else {
+      this.dir(0, 0);
+    }
+  }
 
   this.eat = function(pos) {
     var d = dist(this.x, this.y, pos.x, pos.y);
