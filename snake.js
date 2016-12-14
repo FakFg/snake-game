@@ -28,11 +28,11 @@ function Snake() {
             this.first = false;
           }
         } else {
-            if (this.y == 30) {
-              this.xdestiny = this.x + 1;
+            if (this.x == 30) {
+              this.ydestiny = this.y + 1;
               this.dir(0, 1);
             } else if ((this.y % 2) == 0) {
-              this.ydestiny = 30;
+              this.xdestiny = 30;
               this.dir(1, 0);
             }
         }
