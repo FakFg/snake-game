@@ -32,8 +32,8 @@ function Snake() {
       var d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
         console.log('starting over');
-        this.x = width-scl/2;
-        this.y = height-scl/2;
+        this.x = width/2;
+        this.y = height/2;
         this.dir(0, 0);
         this.total = 0;
         this.tail = [];
