@@ -37,6 +37,7 @@ function draw() {
     pickLocation();
   }
   s.death();
+  s.goto();
   s.update();
   s.show();
 
