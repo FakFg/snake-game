@@ -25,9 +25,11 @@ function Snake() {
         this.first = false;
       }
     } else {
-      console.log(this.y);
-      if ((this.y % 2) == 0) {
+      if ((this.y % 2) == 0) and
+         (this.x < width) {
         this.dir(1, 0);
+      } else {
+        this.dir(0, 1);
       }
     }
   }
