@@ -15,6 +15,9 @@ function Snake() {
   this.tail = [];
   
   this.goto = function() {
+      var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
+      if (d < 1) {
+      }
     if (this.first) {
       if (this.xdestiny < this.x) {
         this.dir(-1, 0);
@@ -25,13 +28,10 @@ function Snake() {
         this.first = false;
       }
     } else {
-      var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
-      if (d < 1) {
-      }
-      if ((this.y % 2) == 0) {
-        this.ydestiny = 30;
-        this.dir(1, 0);
-      }
+        if ((this.y % 2) == 0) {
+          this.ydestiny = 30;
+          this.dir(1, 0);
+        }
     }
   }
 
