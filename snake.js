@@ -14,7 +14,6 @@ function Snake() {
   this.tail = [];
   
   this.goto = function() {
-      console.log(this.x);
       if (this.xdestiny < this.x) {
         this.dir(-1, 0);
       } else if (this.xdestiny > this.x) {
@@ -29,12 +28,14 @@ function Snake() {
       var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
         if ((this.y % 2) == 0) {
+          console.log('par');
           if (this.x == 580) {
             this.ydestiny = this.y + 20;
           } else {
             this.xdestiny = 580;
           }
         } else if ((this.y % 2) == 1) {
+          console.log('impar');
           if (this.x == 20) {
             this.ydestiny = this.y + 20;
           } else {
