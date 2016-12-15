@@ -11,7 +11,7 @@ var rows = 0;
 var food;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(200, 200);
   cols = floor(width/scl);
   rows = floor(height/scl);
   s = new Snake();
