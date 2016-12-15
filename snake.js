@@ -27,19 +27,19 @@ function Snake() {
       }
       var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
-        if (((this.y / 20) % 2) == 0) {
+        if (((this.y / scl) % 2) == 0) {
           console.log('par');
-          if (this.x == 580) {
-            this.ydestiny = this.y + 20;
+          if (this.x == (height - scl)) {
+            this.ydestiny = this.y + scl;
           } else {
-            this.xdestiny = 580;
+            this.xdestiny = (height - scl);
           }
-        } else if (((this.y / 20) % 2) == 1) {
+        } else if (((this.y / scl) % 2) == 1) {
           console.log('impar');
-          if (this.x == 20) {
-            this.ydestiny = this.y + 20;
+          if (this.x == (0 + scl)) {
+            this.ydestiny = this.y + scl;
           } else {
-            this.xdestiny = 20;
+            this.xdestiny = (0 + scl);
           }
         }
       }
