@@ -97,6 +97,7 @@ function Snake() {
     for (var i = 0; i < this.tail.length; i++) {
       rect(this.tail[i].x, this.tail[i].y, scl, scl);
     }
+    fill(150);
     rect(this.x, this.y, scl, scl);
 
   }
