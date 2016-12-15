@@ -31,18 +31,14 @@ function Snake() {
         if ((this.y % 2) == 0) {
           if (this.x == 580) {
             this.ydestiny = this.y + 20;
-            this.dir(0, 1);
           } else {
             this.xdestiny = 580;
-            this.dir(1, 0);
           }
         } else if ((this.y % 2) == 1) {
           if (this.x == 20) {
             this.ydestiny = this.y + 20;
-            this.dir(0, 1);
           } else {
             this.xdestiny = 20;
-            this.dir(-1, 0);
           }
         }
       }
