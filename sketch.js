@@ -31,12 +31,10 @@ function mousePressed() {
 
 function draw() {
   background(51);
-/*
   if (s.eat(food)) {
     pickLocation();
   }
-*/
-  s.death();
+//  s.death();
   s.goto();
   s.update();
   s.show();
