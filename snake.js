@@ -28,15 +28,16 @@ function Snake() {
       var d = dist(this.x, this.y, this.xdestiny, this.ydestiny);
       if (d < 1) {
         if (((this.y / scl) % 2) == 0) {
-          console.log('par');
-          if (this.x == (height - scl)) {
+          if (this.x == (width - scl)) {
             this.ydestiny = this.y + scl;
           } else {
-            this.xdestiny = (height - scl);
+            this.xdestiny = (width - scl);
           }
         } else if (((this.y / scl) % 2) == 1) {
-          console.log('impar');
-          if (this.x == (0 + scl)) {
+          if (this.y == (height - scl)) {
+            this.xdestiny = 0;
+            this.ydestiny = 0;
+          } else if (this.x == (0 + scl)) {
             this.ydestiny = this.y + scl;
           } else {
             this.xdestiny = (0 + scl);
